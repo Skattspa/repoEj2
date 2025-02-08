@@ -11,6 +11,7 @@ public class Atraccion {
         this.semaphore = new Semaphore(capacidad); // Capacidad de la atracción
     }
 
+    // Método que simula  acceder a la atracción
     public void acceder(Visitante visitante) {
         try {
             semaphore.acquire();

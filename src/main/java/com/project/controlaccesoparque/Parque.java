@@ -13,7 +13,7 @@ public class Parque {
             puertas[i] = new Puerta(i + 1);
         }
     }
-
+// Método que simula la simulación de acceso al parque
     public void iniciarSimulacion() {
         ExecutorService executor = Executors.newFixedThreadPool(10); // 10 visitantes
 
@@ -32,6 +32,7 @@ public class Parque {
         return codigoAcceso++;
     }
 
+    // Método que simula el acceso al parque
     private void accederAlParque(Visitante visitante) {
         System.out.println("Visitante " + visitante.getId() + " con código " + visitante.getCodigoAcceso() + " intentando acceder al parque.");
         for (Puerta puerta : puertas) {

@@ -10,7 +10,7 @@ public class Puerta {
         this.id = id;
         this.semaphore = new Semaphore(1); // Solo una persona puede acceder a la vez
     }
-
+// Método que simula el acceso a través de la puerta para  visitantes
     public boolean acceder(Visitante visitante) {
         if (semaphore.tryAcquire()) {
             try {
